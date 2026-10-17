@@ -1,0 +1,19 @@
+[project]
+name = "screen-capture-mcp"
+version = "0.1.0"
+description = "A local MCP server that takes on-demand screenshots of a chosen monitor."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp>=2.3.0",
+    "mss>=10.2.0",
+    "pillow>=13.0.0",
+]
+
+[project.scripts]
+screen-capture-mcp = "screen_capture_mcp.server:main"
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"
